@@ -33,21 +33,25 @@ In [generate_blurred_dataset.m](https://github.com/marcelampc/d3net_depth_estima
 ---
 ### BibTex reference:
 
+```
 @article{Carvalho2018eccv3drw,
-  title={Deep Depth from Defocus: how can defocus blur improve 3D estimation using dense neural networks?},
-  author={[Marcela Carvalho](http://mcarvalho.ml/) and [Bertrand Le Saux](https://blesaux.github.io/) and Pauline Trouvé-Peloux and Andrés Almansa and Frédéric Champagnat},
+  title={Deep Depth from Defocus: how can defocus blur improve {3D} estimation using dense neural networks?},
+  author={Marcela Carvalho and Bertrand {Le Saux} and Pauline Trouv\'{e}-Peloux and Andr\'{e}s Almansa and Fr\'{e}d\'{e}ric Champagnat},
   journal={3DRW ECCV Workshop},
   year={2018},
   publisher={IEEE}
 }
+```
 
+```
 @article{Carvalho2018icip,
   title={On regression losses for deep depth estimation},
-  author={[Marcela Carvalho](http://mcarvalho.ml/) and [Bertrand Le Saux](https://blesaux.github.io/) and Pauline Trouvé-Peloux and Andrés Almansa and Frédéric Champagnat},
+  author={Marcela Carvalho and Bertrand {Le Saux} and Pauline Trouv\'{e}-Peloux and Andr\'{e}s Almansa and Fr\'{e}d\'{e}ric Champagnat},
   journal={ICIP},
   year={2018},
   publisher={IEEE}
 }
+```
 
 
 
