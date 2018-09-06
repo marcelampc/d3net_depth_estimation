@@ -15,7 +15,7 @@ This code implements the Dense Deep Depth Estimation Network (D3-Net) in PyTorch
 
 We also publish the dataset for Deep Depth from Defocus estimation created using a DSLR camera and a Xtion sensor (figure 1). This dataset was presented in in:
 
-[Deep Depth from Defocus: how can defocus blur improve 3D estimation using dense neural networks?](http://mcarvalho.ml/material/docs/2018/regression_losses_icip_2018.pdf), [Marcela Carvalho](http://mcarvalho.ml/), [Bertrand Le Saux](https://blesaux.github.io/), Pauline Trouvé-Peloux, Andrés Almansa, Frédéric Champagnat, 3DRW ECCV Workshop 2018.
+[Deep Depth from Defocus: how can defocus blur improve 3D estimation using dense neural networks?](https://arxiv.org/pdf/1809.01567.pdf), [Marcela Carvalho](http://mcarvalho.ml/), [Bertrand Le Saux](https://blesaux.github.io/), Pauline Trouvé-Peloux, Andrés Almansa, Frédéric Champagnat, 3DRW ECCV Workshop 2018.
 
  The [dfd_indoor](/dfd_datasets/dfd_indoor) dataset contains 110 images for training and 29 images for testing. The [dfd_outdoor](/dfd_datasets/dfd_outdoor) dataset contains 34 images for tests; no ground truth was given for this dataset, as the depth sensor only works on indoor scenes.
 
