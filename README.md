@@ -1,4 +1,4 @@
-# D3-Net in PyTorch
+# Deep Depth-from-Defocus (Deep-DFD)
 
 ## Network Architecture
 
@@ -10,6 +10,18 @@ This code implements the Dense Deep Depth Estimation Network (D3-Net) in PyTorch
   <img src="/images/d3_net_architecture.png" width="70%" >
   <figcaption>Fig.1 - D3-Net architecture. </figcaption>
 </figure>
+
+If you use this work for your projects, please take the time to cite our ICIP paper:
+
+```
+@article{Carvalho2018icip,
+  title={On regression losses for deep depth estimation},
+  author={Marcela Carvalho and Bertrand {Le Saux} and Pauline Trouv\'{e}-Peloux and Andr\'{e}s Almansa and Fr\'{e}d\'{e}ric Champagnat},
+  journal={ICIP},
+  year={2018},
+  publisher={IEEE}
+}
+```
 
 ## Indoor and outdoor DFD dataset
 
@@ -30,8 +42,7 @@ We also publish the dataset for Deep Depth from Defocus estimation created using
 ## Generate Synthetic Defocused Data
 In [generate_blurred_dataset.m](https://github.com/marcelampc/d3net_depth_estimation/matlab/generate_blurred_dataset.m), change lines 14 to 18 to corresponding paths in your computer and run.
 
----
-### BibTex reference:
+If you use this work for your projects, please take the time to cite our ECCV Workshop paper:
 
 ```
 @article{Carvalho2018eccv3drw,
@@ -43,17 +54,14 @@ In [generate_blurred_dataset.m](https://github.com/marcelampc/d3net_depth_estima
 }
 ```
 
-```
-@article{Carvalho2018icip,
-  title={On regression losses for deep depth estimation},
-  author={Marcela Carvalho and Bertrand {Le Saux} and Pauline Trouv\'{e}-Peloux and Andr\'{e}s Almansa and Fr\'{e}d\'{e}ric Champagnat},
-  journal={ICIP},
-  year={2018},
-  publisher={IEEE}
-}
-```
+---
 
+### Requirements
 
+\[To be added\]
+
+## License
+Code (scripts and Jupyter notebooks) are released under the GPLv3 license for non-commercial and research purposes only. For commercial purposes, please contact the authors.
 
 
 <!-- (/images/DSLR_Xtion.png | width=48 "Platform to acquire defocused images and corresponding depth maps.") -->
