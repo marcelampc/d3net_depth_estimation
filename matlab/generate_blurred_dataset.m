@@ -30,19 +30,17 @@ function [] = generate_blurred_dataset_NYUv2()
         end
         % read images
         im=double(imread([path_rgb contents_rgb(i+2).name]));
-        % ignore dark images
-        if mean2(im) <= min_mean
             depth=(imread([path_depth contents_depth(i+2).name]));
 
-            %conversion into depth values in meters
-            depth=double(depth)/(1000.0);
+        %conversion into depth values in meters
+        depth=double(depth)/(1000.0);
 
 
-            [im_refoc, ~, ~, D]=refoc_image(im,depth,step_depth,focus,f,N,px,mode_);
+        [im_refoc, ~, ~, D]=refoc_image(im,depth,step_depth,focus,f,N,px,mode_);
 
-            imwrite(uint8(im_refoc), [dest_path_rgb contents_rgb(i+2).name])
-            imwrite(uint16(depth*1000), [dest_path_depth contents_depth(i+2).name]) % save depth in milimeters   
-        end
+        imwrite(uint8(im_refoc), [dest_path_rgb contents_rgb(i+2).name])
+        imwrite(uint16(depth*1000), [dest_path_depth contents_depth(i+2).name]) % save depth in milimeters   
+
         if (rem(i-1,100) == 0)
             is = etime(clock, s);
             esttime = is * (length(contents_rgb)-2 -i);
@@ -54,8 +52,6 @@ function [] = generate_blurred_dataset_NYUv2()
         waitbar(perc,h,...
             [' focus: ' num2str(focus) ' ' sprintf('%3.1f%% [%2.0fh%2.0fm%2.0fs]',...
             perc*100, hours, min, sec)]);
-
-
       end
 
 %       figure
