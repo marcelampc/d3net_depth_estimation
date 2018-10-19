@@ -26,10 +26,6 @@ We also publish the dataset for Deep Depth from Defocus estimation created using
 
 <!-- Add example of the dataset -->
 
-
-## Generate Synthetic Defocused Data
-In [generate_blurred_dataset.m](https://github.com/marcelampc/d3net_depth_estimation/matlab/generate_blurred_dataset.m), change lines 14 to 18 to corresponding paths in your computer and run.
-
 ---
 ### BibTex reference:
 
@@ -53,7 +49,22 @@ In [generate_blurred_dataset.m](https://github.com/marcelampc/d3net_depth_estima
 }
 ```
 
+## Depth Estimation
+### Setup
+Requires Python 3.6 with pip and the following libraries:
+```python
+# Pytorch 0.4.0
+conda install pytorch torchvision -c pytorch
+# Visdom
+pip install visdom
+# Jupyter Notebook
+pip install notebook
+```
 
+### Usage
+
+## Generate Synthetic Defocused Data
+In [generate_blurred_dataset.m](https://github.com/marcelampc/d3net_depth_estimation/matlab/generate_blurred_dataset.m), change lines 14 to 18 to corresponding paths in your computer and run.
 
 
 <!-- (/images/DSLR_Xtion.png | width=48 "Platform to acquire defocused images and corresponding depth maps.") -->

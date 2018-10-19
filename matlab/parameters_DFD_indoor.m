@@ -1,5 +1,5 @@
 % optical parameter of the simulated lens (in m)
-px=6*1e-6*6; % x2 car les images sont sous-échantillonnées 
+px=6*1e-6*6; % x2 because images are subsampled 
 N=2.5;
 f=35*1e-3; %2.9*1e-3 for kinect
 mode_='gaussian';
