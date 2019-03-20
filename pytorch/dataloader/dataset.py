@@ -75,4 +75,4 @@ class DatasetFromFolder(data.Dataset):
         return input_img_tensor, targets_tensor
 
     def __len__(self):
-        return 1 #len(self.input_list)
+        return len(self.input_list)
