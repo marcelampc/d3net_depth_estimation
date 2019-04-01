@@ -42,13 +42,11 @@ We also publish the dataset for Deep Depth from Defocus estimation created using
 
 ---
 ### BibTex reference:
-=======
 
 ## Generate Synthetic Defocused Data
 In [generate_blurred_dataset.m](https://github.com/marcelampc/d3net_depth_estimation/matlab/generate_blurred_dataset.m), change lines 14 to 18 to corresponding paths in your computer and run.
 
 If you use this work for your projects, please take the time to cite our ECCV Workshop paper:
->>>>>>> 8238c86d1f6ee810ff821f9e297ad53743b2d75c
 
 ```
 @article{Carvalho2018eccv3drw,
@@ -80,12 +78,11 @@ pip install notebook
 
 ## Generate Synthetic Defocused Data
 In [generate_blurred_dataset.m](https://github.com/marcelampc/d3net_depth_estimation/matlab/generate_blurred_dataset.m), change lines 14 to 18 to corresponding paths in your computer and run.
-=======
+
 \[To be added\]
 
 ## License
 Code (scripts and Jupyter notebooks) are released under the GPLv3 license for non-commercial and research purposes only. For commercial purposes, please contact the authors.
->>>>>>> 8238c86d1f6ee810ff821f9e297ad53743b2d75c
 
 
 <!-- (/images/DSLR_Xtion.png | width=48 "Platform to acquire defocused images and corresponding depth maps.") -->
