@@ -40,7 +40,6 @@ We also publish the dataset for Deep Depth from Defocus estimation created using
 
 <!-- Add example of the dataset -->
 
-<<<<<<< HEAD
 ---
 ### BibTex reference:
 =======
@@ -65,7 +64,6 @@ If you use this work for your projects, please take the time to cite our ECCV Wo
 
 ### Requirements
 
-<<<<<<< HEAD
 ## Depth Estimation
 ### Setup
 Requires Python 3.6 with pip and the following libraries:
