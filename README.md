@@ -1,7 +1,5 @@
 # Deep Depth-from-Defocus (Deep-DFD)
 
-In progress... We are still uploading models and improving the code to easy usage.
-
 ## Network Architecture
 
 This code implements the Dense Deep Depth Estimation Network (D3-Net) in PyTorch, from the paper:
