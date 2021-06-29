@@ -59,18 +59,53 @@ If you use this work for your projects, please take the time to cite our ECCV Wo
 ---
 
 ### Requirements
+Requires Python 3.6 with pip and the following libraries:
+
+- Linux
+- Python 3.6+
+- PyTorch 1.9
+- Cuda 10.2
+- Visdom
+
 
 ## Depth Estimation
-### Setup
-Requires Python 3.6 with pip and the following libraries:
-```python
-# Pytorch 0.4.0
-conda install pytorch torchvision -c pytorch
-# Visdom
-pip install visdom
-# Jupyter Notebook
-pip install notebook
+### Installation
+
+Using [Conda](https://www.anaconda.com/products/individual#linux):
+
+```shell
+cd pytorch
+conda create -n d3net-env python=3.7 -y
+conda activate d3net-env
+conda config --append channels conda-forge
+sh pre_install.sh
 ```
+
+Create a **checkpoints** and **results** folder, or a symbolic link to your respective folders.
+
+```shell
+mkdir checkpoints results
+
+# Or create symbolic link
+ln -s path_to_checkpoints checkpoints
+ln -s path_to_results results
+```
+
+## Train D3-Net on DFD Dataset
+
+Run the script in [train_dfd.sh](pytorch/std_scripts/train_dfd.sh) to train D3-Net on DFD Indoor Dataset. In your terminal, enter your conda environment
+
+```shell
+# Start Visdom
+visdom -p 8001
+
+# In another terminal, if not already inside,
+cd pytorch
+
+# Run train
+sh std_scripts/train_dfd.sh
+```
+
 
 ### Usage
 
