@@ -86,7 +86,7 @@ Create a **checkpoints** and **results** folder, or a symbolic link to your resp
 ```shell
 mkdir checkpoints results
 
-# Or create symbolic link
+# Or
 ln -s path_to_checkpoints checkpoints
 ln -s path_to_results results
 ```

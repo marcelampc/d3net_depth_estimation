@@ -42,7 +42,7 @@ class TrainOptions():
         self.parser.add_argument('--init_method', default='normal')
         self.parser.add_argument('--use_cudnn_benchmark', action='store_true')
         ########################## Data augmentation ##########################
-        self.parser.add_argument('--data_augmentation', nargs='+', default=["t", "f", "f", "f"])
+        self.parser.add_argument('--data_augmentation', nargs='+', default=["t", "f", "f", "f", "t"], help="hflip vflip scale color rotation")
         ########################### Display options ###########################
         self.parser.add_argument('--display', action='store_true',
                             help='display results (default: false)')

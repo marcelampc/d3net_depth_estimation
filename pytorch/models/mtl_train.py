@@ -134,7 +134,7 @@ class MultiTaskGen(TrainModel):
         outG = self.netG.forward(input_data)
         
         losses = []
-        norm_grad = []
+        # norm_grad = []
         for i_task, task in enumerate(self.opt.tasks):
             target = target_cpu[i_task].to(self.cuda)
             if task == 'semantics':
@@ -156,9 +156,9 @@ class MultiTaskGen(TrainModel):
             # show each loss
             for i, loss_task in enumerate(losses):
                 self.set_current_errors_string('loss{}'.format(i), self.to_numpy(loss_task))
-            self.norm_grad_sum += np.array(norm_grad).mean()
-            norm_grad = self.norm_grad_sum / self.n_iterations
-            self.set_current_errors(norm_grad=norm_grad)
+            # self.norm_grad_sum += np.array(norm_grad).mean()
+            # norm_grad = self.norm_grad_sum / self.n_iterations
+            # self.set_current_errors(norm_grad=norm_grad)
 
     def evaluate(self, data_loader, epoch):
         if self.opt.validate and self.total_iter % self.opt.val_freq == 0:

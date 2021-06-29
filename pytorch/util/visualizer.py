@@ -44,15 +44,9 @@ class Visualizer():
             image_numpy = img
         if img.shape[1] == 3:
             image_numpy = (image_numpy + 1) / 2.0 * convert_value
-            # image_numpy = (image_numpy + mean/std) * std * 255.0
-            image_numpy = image_numpy.astype(imtype)    # .transpose([2,0,1])
+            image_numpy = image_numpy.astype(imtype)
         else:
-            # st()
-            # image_numpy = image_numpy.astype(imtype)
             image_numpy = (image_numpy - image_numpy.min()) * (255 / self.opt.max_distance)
-            # image_numpy = image_numpy - image_numpy.min()
-            # image_numpy = (image_numpy / image_numpy.max()) * 255
-            # image_numpy = (image_numpy / image_numpy.max()) * 255
             image_numpy = np.repeat(image_numpy, 3, axis=0)
         return image_numpy
 
@@ -64,8 +58,6 @@ class Visualizer():
                 for i, (label, image_numpy) in enumerate(visuals.items()):
                     if i == 0:
                         image_conc = self.tensor2im(image_numpy)
-                        # input_shape = image_conc.shape
-                        # image_conc = image_conc.resize(self.outputSize)
                         label_conc = label
                     else:
                         if 'sem' in label:
@@ -75,10 +67,8 @@ class Visualizer():
                             image_conc = np.concatenate((image_conc, image), axis=1)
                             label_conc += ('\t' + label)
                         else:
-                            image = self.tensor2im(image_numpy)  # , imtype=np.uint16, convert_value=(pow(2, 16) - 1))
+                            image = self.tensor2im(image_numpy)
                             image_conc = np.concatenate((image_conc, image), axis=1)
-                            # if input_shape != image_conc.shape:
-                            #     image_conc = imresize(image_conc, input_shape[0], interp='bilinear')
                             label_conc += ('\t' + label)
 
                 self.vis.image(image_conc,
@@ -159,21 +149,4 @@ class Visualizer():
             return self.plot_data
         else:
             return self.plot_data_val
-
-    # def _save_plot_data(self, plot_data, filename):
-    #     # save
-    #     pickle.dump(plot_data, open(filename+'.p', 'wb'))
-
-    # def save_plot_data(self):
-    #     _save_plot_data(self.plot_data; 'plot_data')
-    #     if self.opt.validate:
-    #         _save_plot_data(self.plot_data_val; 'plot_data_val')
-
-    # def _load_plot_data(self, plot_data, filename):
-    #     # verify if file exists
-    #     plot_data =
-
-    # def load_plot_data(self):
-    #     _load_plot_data(self.plot_data, os.path.join('plot_data'))
-    #     if self.opt.validate:
-    #         _load_plot_data(self.plot_data_val; 'plot_data_val')
+            

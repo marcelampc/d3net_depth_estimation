@@ -1,8 +1,6 @@
 # simplified main
-
 from options.extra_args_mtl import MTL_Options as TrainOptions
 from dataloader.data_loader import CreateDataLoader
-# from ipdb import set_trace as st
 
 # Load options
 opt = TrainOptions().parse()

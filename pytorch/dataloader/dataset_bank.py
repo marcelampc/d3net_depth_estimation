@@ -14,9 +14,7 @@ def is_image_file(filename):
     return any(filename.endswith(extension) for extension in IMG_EXTENSIONS)
 
 def dataset_std(root, data_split, tasks):
-    input_list = sorted(glob.glob(join(root, 'rgb', data_split, '*.png')))
-    print(listdir(root))
-    st()
+    input_list = sorted(glob.glob(join(root, 'rgb', data_split, '*.JPG')))
     targets_list = []
     for task in tasks:
         targets_list.append(sorted(glob.glob(join(root, task, data_split, '*.png'))))
