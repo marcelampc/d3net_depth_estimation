@@ -1,13 +1,12 @@
 
-import sys
 import os
+import sys
+
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.autograd import Variable, Function
-
-from ipdb import set_trace as st
-import numpy as np
 
 from .rank_loss import image_rank_4d
 

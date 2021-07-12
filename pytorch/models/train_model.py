@@ -49,13 +49,6 @@ class TrainModel():
 
         self.opt.print_freq = self.opt.display_freq
 
-        # self.input = self.get_variable(torch.FloatTensor(self.batchSize, opt.input_nc, self.opt.imageSize[0], self.opt.imageSize[1]))
-        # self.target = self.get_variable(torch.FloatTensor(self.batchSize, opt.output_nc, self.opt.imageSize[0], self.opt.imageSize[1]))
-        # if opt.use_semantics:
-        #     self.target_sem = self.get_variable(torch.LongTensor(self.batchSize, opt.output_nc, self.opt.imageSize[0], self.opt.imageSize[1]))
-        # self.logfile = # ToDo
-
-        # visualizer
         self.visualizer = Visualizer(opt)
 
         if self.opt.resume and self.opt.display_id > 0:
